@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PSD to HTML</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header_logo">
+        <img class="masterlab_logo" src="images/Masteralb.png" alt="">
+    </header>
+    <div class="wrapper">
+        <section class="left_column">
+            <div class="register_form">
+                <h1 class="form_title"> Register Form </h1>
+
+                <form class="form">
+                    <div class=form_input_row>
+                        <div class="form_icon icon_user"></div>
+                        <div class="form_input">
+                            <label for="register_username"></label>
+                            <input id="register_username" class="form_input_input" name="register_username" required="required"
+                                type="text" placeholder="Username" />
+                        </div>
+                    </div>
+
+                    <div class=form_input_row>
+                        <div class="form_icon icon_password"> </div>
+                        <div class="form_input">
+                            <label for="register_password"></label>
+                            <input id="register_password" class="form_input_input" name="register_password" required="required"
+                                type="password" placeholder="Password" />
+                        </div>
+                    </div>
+
+                    <div class=form_input_row>
+                        <div class="form_icon icon_password"> </div>
+                        <div class="form_input">
+                            <label for="register_repeat_password"></label>
+                            <input id="register_repeat_password" class="form_input_input" name="register_repeat_password"
+                                required="required" type="password" placeholder="Repeat Password" />
+                        </div>
+                    </div>
+
+                    <div class=form_input_row>
+                        <div class="form_icon icon_email"> </div>
+                        <div class="form_input">
+                            <label for="register_email"></label>
+                            <input id="register_email" class="form_input_input" name="register_email" required="required"
+                                type="email" placeholder="Email" />
+                        </div>
+                    </div>
+
+
+                    <div class="form_input_row">
+                        <div class="form_icon icon_localization"></div>
+                        <div class="form_input">
+                            <label for="register_localization"></label>
+                            <select class="form_input_input register_form_select" id="register_localization" name="register_localization"
+                                required="required" type="text" placeholder="Your Localization">
+                                <option class="register_form_option" value="" disabled selected hidden>Your Location</option>
+                                <option class="register_form_option" value="Warszawa">Warszawa</option>
+                                <option class="register_form_option" value="Wrocław">Wrocław</option>
+                                <option class="register_form_option" value="Kraków">Kraków</option>
+                                <option class="register_form_option" value="Poznań">Poznań</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <footer class="register_form_footer">
+                        <div class="register_checkbox_row">
+                            <label for="register_checkbox">
+                                <input id="register_checkbox" class="checkbox_input" type="checkbox">I have read and
+                                accepted
+                                the terms of use.
+                            </label>
+                        </div>
+                        <input type="submit" class="submit register_submit" value="Sign up">
+                    </footer>
+
+                </form>
+            </div>
+            <div class="send_mail">
+                <h1 class="form_title"> Send Email </h1>
+
+                <form class="form">
+
+                    <div class=form_input_row>
+                        <div class="form_icon icon_user"></div>
+                        <div class="form_input">
+                            <label for="send_email_username"></label>
+                            <input id="send_email_username" class="form_input_input" name="send_email_username"
+                                required="required" type="text" placeholder="Username" />
+                        </div>
+                    </div>
+
+                    <div class=form_input_row>
+                        <div class="form_icon icon_email"> </div>
+                        <div class="form_input">
+                            <label for="send_email_email"></label>
+                            <input id="send_email_email" class="form_input_input" name="send_email_email" required="required"
+                                type="email" placeholder="Email" />
+                        </div>
+                    </div>
+
+                    <textarea class="form_input send_mail_textarea" placeholder="Your message"></textarea>
+
+                    <footer class="send_email_form_footer">
+                        <label for="send_email_checkbox">
+                            <input id="send_email_checkbox" class="checkbox_input" type="checkbox">Send a copy to my
+                            Email
+                            <input type="submit" class="submit send_email_submit" value="Sign up">
+                        </label>
+                    </footer>
+
+
+                </form>
+            </div>
+        </section>
+        <section class="right_column">
+            <div class="sign_in_form">
+                <h1 class="form_title"> Sign Form </h1>
+
+                <form class="form">
+
+                    <div class=form_input_row>
+                        <div class="form_icon icon_user"></div>
+                        <div class="form_input">
+                            <label for="sign_in_username"></label>
+                            <input id="sign_in_username" class="form_input_input" name="sign_in_username" required="required"
+                                type="text" placeholder="Username" />
+                        </div>
+                    </div>
+
+                    <div class=form_input_row>
+                        <div class="form_icon icon_email"> </div>
+                        <div class="form_input">
+                            <label for="sign_in_email"></label>
+                            <input id="sign_in_email" class="form_input_input" name="sign_in_email" required="required"
+                                type="email" placeholder="Email" />
+                        </div>
+                    </div>
+
+                    <footer class="sign_in_form_footer">
+                        <label for="sign_in_checkbox">
+                            <input id="sign_in_checkbox" class="checkbox_input" type="checkbox">Remember Me
+                            <input type="submit" class="submit sign_in_submit" value="Sign in">
+                        </label>
+                    </footer>
+
+                </form>
+            </div>
+            <div class="recover_form">
+                <h1 class="form_title"> Recovery Form </h1>
+
+                <form class="form">
+
+                    <div class=form_input_row>
+                        <div class="form_icon icon_email"> </div>
+                        <div class="form_input">
+                            <label for="recover_email"></label>
+                            <input id="recover_email" class="form_input_input" name="recover_email" required="required"
+                                type="email" placeholder="Email" />
+                        </div>
+                    </div>
+
+                    <div class=form_input_row>
+                        <div class="form_icon icon_phone_number"> </div>
+                        <div class="form_input">
+                            <label for="recover_phone_number"></label>
+                            <input id="recover_phone_number" class="form_input_input" name="srecover_phone_number"
+                                required="required" type="email" placeholder="Email" />
+                        </div>
+                    </div>
+
+                    <footer class="recover_form_footer">
+                        <input type="submit" class="submit recover_submit" value="Send">
+                        <button class="button recover_button">Done</button>
+                    </footer>
+
+
+                </form>
+            </div>
+            <div class="subscribe_form">
+                <h1 class="form_title"> Subscribe Form </h1>
+
+                <form class="form">
+
+                    <div class=form_input_row>
+                        <div class="form_icon icon_email"> </div>
+                        <div class="form_input">
+                            <label for="subscribe_email"></label>
+                            <input id="subscribe_email" class="form_input_input" name="subscribe_email" required="required"
+                                type="email" placeholder="Email" />
+                        </div>
+                    </div>
+
+                    <footer class="subscribe_form_footer">
+                        <input type="submit" class="submit subscribe_submit" value="Subscribe">
+                        <button class="button subscribe_button">No,Thanks</button>
+                    </footer>
+
+                </form>
+            </div class="form_title">
+            <footer class="footer_logo">
+                <img src="images/Masteralb.png" alt="">
+            </footer>
+        </section>
+
+    </div>
+</body>
+
+</html>

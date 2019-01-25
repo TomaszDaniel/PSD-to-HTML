@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="14px" height="15px" viewBox="0 0 14 15">
+<filter filterUnits="objectBoundingBox" x="0.00" y="-7.14" width="107.69" height="114.29" id="filter0">
+<feGaussianBlur in="SourceAlpha" stdDeviation="0.00" result="dsBlurOut1"/>
+<feFlood flood-color="rgb(255,255,255)" result="dsFloodOut1"/>
+<feComposite in="dsFloodOut1" in2="dsBlurOut1" operator="in" result="dsShadow1"/>
+<feOffset in="dsShadow1" dx="0.50" dy="0.87" result="dsOffset1"/>
+<feComposite in="dsOffset1" in2="SourceAlpha" operator="out" result="dropShadow1"/>
+<feBlend in="dropShadow1" in2="SourceGraphic" mode="normal" result="sourceGraphic"/>
+<feImage x="0" y="0" width="13" height="14" preserveApectRatio="none" xlink:href="#symbol0"/>
+<feComposite in="grImage1" in2="SourceAlpha" operator="in" result="grOverlay1"/>
+<feComponentTransfer in="grOverlay1" result="grOpacity1">
+    <feFuncA type="linear" slope="0.36"/>
+</feComponentTransfer>
+<feBlend in="grOpacity1" in2="sourceGraphic" mode="softLight" result="gradientOverlay1"/>
+<feFlood flood-color="rgb(255,255,255)" result="isFloodOut1"/>
+<feOffset in="SourceAlpha" dx="0.50" dy="0.87" result="isOffset1"/>
+<feGaussianBlur in="isOffset1" stdDeviation="0.50" result="isBlurOut1"/>
+<feComposite in="isFloodOut1" in2="isBlurOut1" operator="out" result="isShadow1"/>
+<feComponentTransfer in="isShadow1" result="isShadowOpacity1">
+    <feFuncA type="linear" slope="0.41"/>
+</feComponentTransfer>
+<feComposite in="isShadowOpacity1" in2="SourceAlpha" operator="in" result="isInnerShadow1"/>
+<feBlend in="isInnerShadow1" in2="gradientOverlay1" mode="normal" result="innerShadow1"/>
+</filter>
+<linearGradient id="linear_PSgrad_0" x1="50%" y1="100%" x2="50%" y2="0%">
+    <stop offset="0%" stop-color="rgb(0,0,0)" stop-opacity="1" />
+    <stop offset="100%" stop-color="rgb(255,255,255)" stop-opacity="1" />
+</linearGradient>
+
+<defs>
+<rect x="0" y="0" width="13" height="14" id="symbol0" fill="url(#linear_PSgrad_0)"/></defs>
+<rect x="0" y="1" width="13" height="12" rx="3" fill="rgb(136,199,20)" filter="url(#filter0)"/></svg>
