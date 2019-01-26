@@ -73,8 +73,9 @@
 
                     <footer class="register_form_footer">
                         <div class="register_checkbox_row">
-                            <label for="register_checkbox">
-                                <input id="register_checkbox" class="checkbox_input" type="checkbox">I have read and
+                            <label class="register_checkbox_label checkbox_label" for="register_checkbox">
+                                <input id="register_checkbox" class="checkbox_input" type="checkbox">
+                                I have read and
                                 accepted
                                 the terms of use.
                             </label>
@@ -84,7 +85,7 @@
 
                 </form>
             </div>
-            <div class="send_mail">
+            <div class="send_mail_form">
                 <h1 class="form_title"> Send Email </h1>
 
                 <form class="form">
@@ -107,14 +108,17 @@
                         </div>
                     </div>
 
-                    <textarea class="form_input send_mail_textarea" placeholder="Your message"></textarea>
+                    <textarea class="form_input send_mail_textarea" placeholder="Your message..."></textarea>
 
                     <footer class="send_email_form_footer">
-                        <label for="send_email_checkbox">
-                            <input id="send_email_checkbox" class="checkbox_input" type="checkbox">Send a copy to my
-                            Email
-                            <input type="submit" class="submit send_email_submit" value="Sign up">
-                        </label>
+                        <div class="send_email_checkbox_row">
+                            <label class="send_email_checkbox_label checkbox_label" for="send_email_checkbox">
+                                <input id="send_email_checkbox" class="checkbox_input" type="checkbox">
+                                Send a copy to my
+                                Email
+                            </label>
+                        </div>
+                        <input type="submit" class="submit send_email_submit" value="Send Email">
                     </footer>
 
 
@@ -146,10 +150,13 @@
                     </div>
 
                     <footer class="sign_in_form_footer">
-                        <label for="sign_in_checkbox">
-                            <input id="sign_in_checkbox" class="checkbox_input" type="checkbox">Remember Me
-                            <input type="submit" class="submit sign_in_submit" value="Sign in">
-                        </label>
+                        <div class="sign_in_checkbox_row">
+                            <label class="sign_in_checkbox_label checkbox_label" for="sign_in_checkbox">
+                                <input id="sign_in_checkbox" class="checkbox_input" type="checkbox">
+                                Remember Me
+                            </label>
+                        </div>
+                        <input type="submit" class="submit sign_in_submit" value="Sign in">
                     </footer>
 
                 </form>
@@ -205,9 +212,9 @@
                     </footer>
 
                 </form>
-            </div class="form_title">
+            </div>
             <footer class="footer_logo">
-                <img src="images/Masteralb.png" alt="">
+                <img class="footer_logo_img masterlab_logo" src="images/Masteralb.png" alt="">
             </footer>
         </section>
 

@@ -5,29 +5,29 @@
   // font-family: 'Montserrat', sans-serif;
 }
 
+// Zmienne
+
+$font-color: rgb(169, 169, 169);
+$row-width: 85%;
+
 body {
   background-image: url("../images/Background.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 
 // Header section
 
-.header_logo,
-.footer_logo {
+.header_logo {
   display: flex;
   justify-content: center;
   margin: 30px 0;
 }
 
-.masterlab_logo,
-.footer_logo {
+.masterlab_logo {
   opacity: 0.5;
 }
 
-.masterlab_logo:hover,
-.footer_logo:hover {
+.masterlab_logo:hover {
   opacity: 1;
 }
 
@@ -35,9 +35,8 @@ body {
 
 .wrapper {
   display: flex;
-  justify-content: space-around;
-  width: 90%;
-  height: 150vh;
+  justify-content: space-between;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -45,14 +44,6 @@ body {
 .right_column {
   width: 40%;
   height: 100%;
-}
-
-.register_form,
-.send_mail,
-.sign_in_form,
-.recover_form,
-.subscribe_form {
-  margin: 30px auto;
 }
 
 .form {
@@ -66,17 +57,18 @@ body {
   color: white;
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .form_input_row {
   display: flex;
   justify-content: center;
-  width: 85%;
-  margin: 10px auto;
+  width: $row-width;
+  margin: 25px auto;
   line-height: 40px;
-  border: 1px solid rgb(169, 169, 169);
+  border: 1px solid $font-color;
   border-radius: 5px;
+  color: $font-color;
 }
 
 .form_input {
@@ -91,6 +83,10 @@ body {
   line-height: 40px;
   border: transparent;
   border-radius: 5px;
+}
+
+.form_input_input::placeholder {
+  color: $font-color;
 }
 
 .form_icon {
@@ -128,10 +124,48 @@ body {
   background: url("../images/phone.svg") no-repeat scroll center;
 }
 
+.submit {
+  height: 41px;
+  border-radius: 3px;
+  box-shadow: 0.5px 0.866px 0px #ffffff;
+  background-color: #93d02b;
+  border: 1px solid #3b9a00;
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-family: "Titillium Text22 L";
+  font-weight: 500;
+}
+
+button {
+  @extend.submit;
+}
+
+.checkbox_input {
+  width: 23px;
+  height: 23px;
+  margin-right: 10px;
+  border-radius: 3px;
+  box-shadow: 1px 1.732px 0px #ffffff;
+  background-color: #f8f8f8;
+  border: 1px solid #c6c6c6;
+}
+
+// .checkbox_input:checked+span {
+//   background: url("../images/green_shape.svg");
+// }
+
+.checkbox_label {
+  display: flex;
+}
+
 // Register form section
 
+.register_form {
+  margin: 50px auto;
+}
+
 .register_form_select {
-  color: rgb(169, 169, 169);
+  color: $font-color;
   height: 35px;
 
   .register_form_option {
@@ -139,11 +173,111 @@ body {
   }
 }
 
+.register_checkbox_row {
+  width: $row-width;
+  margin: 15px auto;
+  color: $font-color;
+}
+
+.register_submit {
+  display: block;
+  width: $row-width;
+  margin: 0 auto;
+}
+
 // Send mail section
 
+.send_mail_form {
+  margin: 50px auto;
+}
+
 .send_mail_textarea {
-  width: 85%;
-  height: 200px;
+  width: $row-width;
+  height: 210px;
   margin: 10px auto;
   resize: vertical;
+  color: $font-color;
+}
+
+
+.send_email_checkbox_row {
+  @extend .register_checkbox_row;
+}
+
+
+.send_email_submit {
+  @extend .register_submit;
+}
+
+// Sign in section
+
+
+.sign_in_form {
+  margin: 50px auto;
+}
+
+.sign_in_form_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: 15px auto 15px auto;
+  color: $font-color;
+}
+
+.sign_in_submit {
+  width: 41.04%;
+}
+
+// Recover section
+
+
+.recover_form {
+  margin: 50px auto;
+}
+
+.recover_form_footer {
+  @extend .sign_in_form_footer;
+}
+
+.recover_submit {
+  @extend .sign_in_submit;
+}
+
+.recover_button {
+  @extend .sign_in_submit;
+  background-color: #bcdb97;
+  border: 1px solid #90ca6d;
+}
+
+// Subscribe section
+
+.subscribe_form {
+  margin: 50px auto;
+}
+
+.subscribe_form_footer {
+  @extend .sign_in_form_footer;
+}
+
+.subscribe_submit {
+  @extend .sign_in_submit;
+}
+
+.subscribe_button {
+  @extend .sign_in_submit;
+  background-color: #f4495b;
+  border: 1px solid #a2202a;
+}
+
+.footer_logo {
+  @extend .masterlab_logo;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin: 60px auto;
+}
+
+.footer_logo_img {
+  width: 250%;
 }
