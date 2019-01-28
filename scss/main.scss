@@ -144,18 +144,32 @@ button {
 }
 
 .checkbox_input {
-  width: 23px;
+
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.checkbox_input:checked~.checkmark {
+  background-image: url('../images/green_shape.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.checkmark {
+  position: relative;
+  top: 2px;
   height: 23px;
+  width: 23px;
   margin-right: 10px;
   border-radius: 3px;
   box-shadow: 1px 1.732px 0px #ffffff;
   background-color: #f8f8f8;
   border: 1px solid #c6c6c6;
+  cursor: pointer;
 }
 
-// .checkbox_input:checked+span {
-//   background: url("../images/green_shape.svg");
-// }
 
 .checkbox_label {
   display: flex;
@@ -291,28 +305,21 @@ button {
 // Media queries
 
 @media (max-width:1199px) {
-  .register_checkbox_input {
-    width: 43px;
-    height: 43px;
+
+  .checkmark {
+    top: 0;
+  }
+
+  .register_checkbox_row,
+  .sign_in_checkbox_row {
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width:975px) {
 
-  .register_checkbox_row {
-    font-size: 1rem;
-  }
-
-  .register_checkbox_input {
-    height: 40px;
-  }
-
-  .send_email_checkbox_row {
-    font-size: 1.1rem;
-  }
-
-  .sign_in_form_footer {
-    font-size: 1rem;
+  .register_checkmark {
+    top: 8px;
   }
 
   .subscribe_button,
@@ -322,6 +329,10 @@ button {
 }
 
 @media (max-width:840px) {
+
+  .checkmark {
+    top: 2px;
+  }
 
   .masterlab_logo {
     width: 70%;
@@ -337,16 +348,8 @@ button {
     margin: 0 auto;
   }
 
-  .register_checkbox_input {
-    width: 23px;
-    height: 23px;
-  }
-
-  .register_checkbox_row {
-    font-size: 1.1rem;
-  }
-
-  .sign_in_form_footer {
+  .register_checkbox_row,
+  .sign_in_checkbox_row {
     font-size: 1.1rem;
   }
 
@@ -360,14 +363,19 @@ button {
   }
 }
 
-@media (max-width:620px) {
-  .header_logo {
-    height: 100px;
+@media (max-width:651px) {
+
+  .checkmark {
+    top: 0;
   }
 
-  .register_checkbox_input {
-    width: 40px;
-    height: 40px;
+  .register_checkbox_row,
+  .sign_in_checkbox_row {
+    font-size: 0.8rem;
+  }
+
+  .header_logo {
+    height: 100px;
   }
 
   .subscribe_button,
@@ -380,28 +388,20 @@ button {
   }
 }
 
-@media (max-width:620px) {
-  .sign_in_checkbox_input {
-    height: 40px;
+@media (max-width:494px) {
+  .register_checkmark {
+    top: 8px;
   }
 }
 
 @media (max-width:405px) {
-  .register_checkbox_input {
-    width: 40px;
-    height: 60px;
+
+  .sign_in_checkbox_row {
+    font-size: 0.7rem;
   }
 
-  .register_checkbox_row {
-    font-size: 1.2rem;
-  }
-
-  .send_email_checkbox_input {
-    width: 23px;
-    height: 40px;
-  }
-
-  .subscribe_button {
+  .subscribe_button,
+  .subscribe_submit {
     font-size: 1rem;
   }
 }
