@@ -1,3 +1,8 @@
 # PSD to HTML
 
-https://tomaszdaniel.github.io/PSD-to-HTML/
+See [DEMO](https://tomaszdaniel.github.io/PSD-to-HTML/)
+
+### Stack
+- Html
+- Css
+- JavaScript
